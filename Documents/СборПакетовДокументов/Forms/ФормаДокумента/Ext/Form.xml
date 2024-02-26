@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ДатаНазначенияСбора" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата назначения сбора</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДатаНазначенияСбораКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаНазначенияСбораРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ДатаФактическогоСбора" id="7">
+			<DataPath>Объект.ДатаФактическогоСбора</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<Width>15</Width>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДатаФактическогоСбораКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ДатаФактическогоСбораРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<Pages name="Страницы" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="11"/>
+			<ChildItems>
+				<Page name="ГруппаТаблицаСтудентов" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Таблица студентов</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаТаблицаСтудентовРасширеннаяПодсказка" id="13"/>
+					<ChildItems>
+						<Table name="ТаблицаСтудентов" id="14">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ТаблицаСтудентов</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТаблицаСтудентовКонтекстноеМеню" id="15"/>
+							<AutoCommandBar name="ТаблицаСтудентовКоманднаяПанель" id="16"/>
+							<ExtendedTooltip name="ТаблицаСтудентовРасширеннаяПодсказка" id="17"/>
+							<SearchStringAddition name="ТаблицаСтудентовСтрокаПоиска" id="18">
+								<AdditionSource>
+									<Item>ТаблицаСтудентов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаСтудентовСтрокаПоискаКонтекстноеМеню" id="19"/>
+								<ExtendedTooltip name="ТаблицаСтудентовСтрокаПоискаРасширеннаяПодсказка" id="20"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТаблицаСтудентовСостояниеПросмотра" id="21">
+								<AdditionSource>
+									<Item>ТаблицаСтудентов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаСтудентовСостояниеПросмотраКонтекстноеМеню" id="22"/>
+								<ExtendedTooltip name="ТаблицаСтудентовСостояниеПросмотраРасширеннаяПодсказка" id="23"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТаблицаСтудентовУправлениеПоиском" id="24">
+								<AdditionSource>
+									<Item>ТаблицаСтудентов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаСтудентовУправлениеПоискомКонтекстноеМеню" id="25"/>
+								<ExtendedTooltip name="ТаблицаСтудентовУправлениеПоискомРасширеннаяПодсказка" id="26"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ТаблицаСтудентовНомерСтроки" id="27">
+									<DataPath>Объект.ТаблицаСтудентов.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаСтудентовНомерСтрокиКонтекстноеМеню" id="28"/>
+									<ExtendedTooltip name="ТаблицаСтудентовНомерСтрокиРасширеннаяПодсказка" id="29"/>
+								</LabelField>
+								<InputField name="ТаблицаСтудентовФИОСтудента" id="30">
+									<DataPath>Объект.ТаблицаСтудентов.ФИОСтудента</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТаблицаСтудентовФИОСтудентаКонтекстноеМеню" id="31"/>
+									<ExtendedTooltip name="ТаблицаСтудентовФИОСтудентаРасширеннаяПодсказка" id="32"/>
+								</InputField>
+								<CheckBoxField name="ТаблицаСтудентовДокументПредоставлен" id="33">
+									<DataPath>Объект.ТаблицаСтудентов.ДокументПредоставлен</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ТаблицаСтудентовДокументПредоставленКонтекстноеМеню" id="34"/>
+									<ExtendedTooltip name="ТаблицаСтудентовДокументПредоставленРасширеннаяПодсказка" id="35"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаТребуемыеДокументы" id="36">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Требуемые документы</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаТребуемыеДокументыРасширеннаяПодсказка" id="37"/>
+					<ChildItems>
+						<Table name="ТребуемыеДокументы" id="38">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ТребуемыеДокументы</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТребуемыеДокументыКонтекстноеМеню" id="39"/>
+							<AutoCommandBar name="ТребуемыеДокументыКоманднаяПанель" id="40"/>
+							<ExtendedTooltip name="ТребуемыеДокументыРасширеннаяПодсказка" id="41"/>
+							<SearchStringAddition name="ТребуемыеДокументыСтрокаПоиска" id="42">
+								<AdditionSource>
+									<Item>ТребуемыеДокументы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТребуемыеДокументыСтрокаПоискаКонтекстноеМеню" id="43"/>
+								<ExtendedTooltip name="ТребуемыеДокументыСтрокаПоискаРасширеннаяПодсказка" id="44"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТребуемыеДокументыСостояниеПросмотра" id="45">
+								<AdditionSource>
+									<Item>ТребуемыеДокументы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТребуемыеДокументыСостояниеПросмотраКонтекстноеМеню" id="46"/>
+								<ExtendedTooltip name="ТребуемыеДокументыСостояниеПросмотраРасширеннаяПодсказка" id="47"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТребуемыеДокументыУправлениеПоиском" id="48">
+								<AdditionSource>
+									<Item>ТребуемыеДокументы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТребуемыеДокументыУправлениеПоискомКонтекстноеМеню" id="49"/>
+								<ExtendedTooltip name="ТребуемыеДокументыУправлениеПоискомРасширеннаяПодсказка" id="50"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ТребуемыеДокументыНомерСтроки" id="51">
+									<DataPath>Объект.ТребуемыеДокументы.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТребуемыеДокументыНомерСтрокиКонтекстноеМеню" id="52"/>
+									<ExtendedTooltip name="ТребуемыеДокументыНомерСтрокиРасширеннаяПодсказка" id="53"/>
+								</LabelField>
+								<InputField name="ТребуемыеДокументыНазваниеДокумента" id="54">
+									<DataPath>Объект.ТребуемыеДокументы.НазваниеДокумента</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ТребуемыеДокументыНазваниеДокументаКонтекстноеМеню" id="55"/>
+									<ExtendedTooltip name="ТребуемыеДокументыНазваниеДокументаРасширеннаяПодсказка" id="56"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.СборПакетовДокументов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>

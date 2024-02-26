@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<Enabled>false</Enabled>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Комментарий" id="7">
+			<DataPath>Объект.Комментарий</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<Table name="ИнформацияОРодителях" id="10">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ИнформацияОРодителях</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ИнформацияОРодителяхКонтекстноеМеню" id="11"/>
+			<AutoCommandBar name="ИнформацияОРодителяхКоманднаяПанель" id="12">
+				<ChildItems>
+					<Button name="ЗаполнитьФИО" id="35">
+						<Type>CommandBarButton</Type>
+						<UserVisible>
+							<xr:Common>true</xr:Common>
+							<xr:Value name="Role.Студент">false</xr:Value>
+						</UserVisible>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.Заполнить</CommandName>
+						<Font ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+						<Picture>
+							<xr:Ref>StdPicture.Next</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Заполнить ФИО</v8:content>
+							</v8:item>
+						</Title>
+						<Shape>Usual</Shape>
+						<ShapeRepresentation>Always</ShapeRepresentation>
+						<ExtendedTooltip name="ЗаполнитьФИОРасширеннаяПодсказка" id="36"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ИнформацияОРодителяхРасширеннаяПодсказка" id="13"/>
+			<SearchStringAddition name="ИнформацияОРодителяхСтрокаПоиска" id="14">
+				<AdditionSource>
+					<Item>ИнформацияОРодителях</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ИнформацияОРодителяхСтрокаПоискаКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ИнформацияОРодителяхСтрокаПоискаРасширеннаяПодсказка" id="16"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ИнформацияОРодителяхСостояниеПросмотра" id="17">
+				<AdditionSource>
+					<Item>ИнформацияОРодителях</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ИнформацияОРодителяхСостояниеПросмотраКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="ИнформацияОРодителяхСостояниеПросмотраРасширеннаяПодсказка" id="19"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ИнформацияОРодителяхУправлениеПоиском" id="20">
+				<AdditionSource>
+					<Item>ИнформацияОРодителях</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ИнформацияОРодителяхУправлениеПоискомКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="ИнформацияОРодителяхУправлениеПоискомРасширеннаяПодсказка" id="22"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ИнформацияОРодителяхНомерСтроки" id="23">
+					<DataPath>Объект.ИнформацияОРодителях.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИнформацияОРодителяхНомерСтрокиКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ИнформацияОРодителяхНомерСтрокиРасширеннаяПодсказка" id="25"/>
+				</LabelField>
+				<InputField name="ИнформацияОРодителяхФИОСтудента" id="26">
+					<DataPath>Объект.ИнформацияОРодителях.ФИОСтудента</DataPath>
+					<Enabled>false</Enabled>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ИнформацияОРодителяхФИОСтудентаКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ИнформацияОРодителяхФИОСтудентаРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="ИнформацияОРодителяхГдеИКемРаботаютРодители" id="29">
+					<DataPath>Объект.ИнформацияОРодителях.ГдеИКемРаботаютРодители</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ИнформацияОРодителяхГдеИКемРаботаютРодителиКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ИнформацияОРодителяхГдеИКемРаботаютРодителиРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<InputField name="ИнформацияОРодителяхАдресРодителей" id="32">
+					<DataPath>Объект.ИнформацияОРодителях.АдресРодителей</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ИнформацияОРодителяхАдресРодителейКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ИнформацияОРодителяхАдресРодителейРасширеннаяПодсказка" id="34"/>
+				</InputField>
+				<InputField name="ИнформацияОРодителяхАдресПроживанияСтудента" id="37">
+					<DataPath>Объект.ИнформацияОРодителях.АдресПроживанияСтудента</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ИнформацияОРодителяхАдресПроживанияСтудентаКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ИнформацияОРодителяхАдресПроживанияСтудентаРасширеннаяПодсказка" id="39"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ИнформацияОСтудентах</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Заполнить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Заполнить</Action>
+		</Command>
+	</Commands>
+</Form>

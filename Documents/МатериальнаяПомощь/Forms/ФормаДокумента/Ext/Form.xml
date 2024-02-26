@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<Width>16</Width>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ДатаПодписания" id="7">
+			<DataPath>Объект.ДатаПодписания</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата подписания банков материальной помощи</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДатаПодписанияКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ДатаПодписанияРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="Комментарий" id="43">
+			<DataPath>Объект.Комментарий</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="44"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="45"/>
+		</InputField>
+		<Table name="МатериальнаяПомощь" id="10">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ТЧ_МатериальнаяПомощь</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="МатериальнаяПомощьКонтекстноеМеню" id="11"/>
+			<AutoCommandBar name="МатериальнаяПомощьКоманднаяПанель" id="12"/>
+			<ExtendedTooltip name="МатериальнаяПомощьРасширеннаяПодсказка" id="13"/>
+			<SearchStringAddition name="МатериальнаяПомощьСтрокаПоиска" id="14">
+				<AdditionSource>
+					<Item>МатериальнаяПомощь</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="МатериальнаяПомощьСтрокаПоискаКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="МатериальнаяПомощьСтрокаПоискаРасширеннаяПодсказка" id="16"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="МатериальнаяПомощьСостояниеПросмотра" id="17">
+				<AdditionSource>
+					<Item>МатериальнаяПомощь</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="МатериальнаяПомощьСостояниеПросмотраКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="МатериальнаяПомощьСостояниеПросмотраРасширеннаяПодсказка" id="19"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="МатериальнаяПомощьУправлениеПоиском" id="20">
+				<AdditionSource>
+					<Item>МатериальнаяПомощь</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="МатериальнаяПомощьУправлениеПоискомКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="МатериальнаяПомощьУправлениеПоискомРасширеннаяПодсказка" id="22"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="МатериальнаяПомощьНомерСтроки" id="23">
+					<DataPath>Объект.ТЧ_МатериальнаяПомощь.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="МатериальнаяПомощьНомерСтрокиКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="МатериальнаяПомощьНомерСтрокиРасширеннаяПодсказка" id="25"/>
+				</LabelField>
+				<InputField name="МатериальнаяПомощьФИО" id="26">
+					<DataPath>Объект.ТЧ_МатериальнаяПомощь.ФИО</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ChoiceButton>true</ChoiceButton>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="МатериальнаяПомощьФИОКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="МатериальнаяПомощьФИОРасширеннаяПодсказка" id="28"/>
+					<Events>
+						<Event name="OnChange">МатериальнаяПомощьФИОПриИзменении</Event>
+					</Events>
+				</InputField>
+				<CheckBoxField name="МатериальнаяПомощьНазначенаПрисутствиеВПриказе" id="38">
+					<DataPath>Объект.ТЧ_МатериальнаяПомощь.Выписано</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Назначена + Включён в приказ</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="МатериальнаяПомощьНазначенаПрисутствиеВПриказеКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="МатериальнаяПомощьНазначенаПрисутствиеВПриказеРасширеннаяПодсказка" id="40"/>
+				</CheckBoxField>
+				<InputField name="МатериальнаяПомощьНазначена" id="46">
+					<DataPath>1/0:cf3e432f-0f4d-489d-84e9-915e7d1a7b7a/0:5f50a940-4121-4362-86b4-db3eacac8c6b</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="МатериальнаяПомощьНазначенаКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="МатериальнаяПомощьНазначенаРасширеннаяПодсказка" id="48"/>
+				</InputField>
+				<InputField name="МатериальнаяПомощьИНН" id="35">
+					<DataPath>Объект.ТЧ_МатериальнаяПомощь.ИНН</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ChoiceButton>true</ChoiceButton>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="МатериальнаяПомощьИННКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="МатериальнаяПомощьИННРасширеннаяПодсказка" id="37"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.МатериальнаяПомощь</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОткрытьТестовуюФорму" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть тестовую форму</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть тестовую форму</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьТестовуюФорму</Action>
+		</Command>
+	</Commands>
+</Form>
